@@ -1,4 +1,5 @@
 //display current day and time
+$(document).ready(function(){
 var dayWeek = moment().format('LLLL');
 console.log(dayWeek);
 $('#currentDay').text(dayWeek);
@@ -10,7 +11,7 @@ console.log(dayWeek);
     $('#currentDay').text(dayWeek); 
 },15000);
 
-//timeblock status
+//time-block status
 var currentTime=moment().format('H');
 console.log("current time: " + currentTime)
 $(document).ready(function(){ 
@@ -32,7 +33,6 @@ $(document).ready(function(){
 });
 
 
-   
 //auditTime();
 setInterval(function(){ 
     
@@ -53,22 +53,15 @@ setInterval(function(){
 },60000);
 
 
+// on save click get the text-area's value
+$(".saveBtn").on("click", function(){
+    var text = $(this)
+    .siblings(".description")
+    .val()
+    .trim();
+    
+    console.log(text);
+})
 
-
-
-
-
-
-
-
-//turn blank p elements into input fields
-//$('#container').on('click','#description', function(){df
-
-   // var textBox=$("<textarea>")
-    //.addClass("ts col-10 description past");
-
-    //$(this).replaceWith(textBox);
-//});
-   // turn them back upon save
-
+})
 

@@ -1,8 +1,18 @@
 //display current day and time
+
 var dayWeek = moment().format('LLLL');
 console.log(dayWeek);
 
 $('#currentDay').text(dayWeek);
+
+//update the time every 30 seconds
+
+var timeUpdate= setInterval(function(){
+    let dayWeek = moment().format('LLLL');
+console.log(dayWeek);
+    $('#currentDay').text(dayWeek); 
+},30000);
+
 
 //turn blank p elements into input fields
 $('#container').on('click','#description', function(){

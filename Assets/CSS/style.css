@@ -30,7 +30,7 @@ textarea{
   border-radius: 15px;
 }
 
-.row {
+.ts {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;;
@@ -40,6 +40,7 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+ 
 }
 
 .past {

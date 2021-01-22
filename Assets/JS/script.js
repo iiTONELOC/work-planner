@@ -10,15 +10,22 @@ console.log(dayWeek);
     $('#currentDay').text(dayWeek); 
 },30000);
 
-//timeblock status
-
+//time-block status
+var currentTime=moment().format('H');
+console.log("current time: " + currentTime)
 $(document).ready(function(){ 
     
         $("textarea").each(function(index){
-            if($(this).attr("data-value")==9){
-            console.log("Yay you found 9!");}
-            else{
-                console.log("NOT 9!")
+            $(this).removeClass("past future present")
+            if($(this).attr("data-value")===currentTime){
+            console.log("Yay you found the current time!");
+            $(this).addClass("present");
+        }else if($(this).attr("data-value") >currentTime){
+                console.log("This is the FUTURE!");
+                $(this).addClass("future");
+            }else if($(this).attr("data-value") <currentTime){
+                $(this).addClass("past");
+                console.log("this is the past")
             }
         });
     

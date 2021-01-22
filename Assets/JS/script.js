@@ -8,7 +8,7 @@ var timeUpdate= setInterval(function(){
     let dayWeek = moment().format('LLLL');
 console.log(dayWeek);
     $('#currentDay').text(dayWeek); 
-},30000);
+},15000);
 
 //timeblock status
 var currentTime=moment().format('H');

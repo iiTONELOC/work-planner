@@ -12,10 +12,21 @@ console.log(dayWeek);
 
 //timeblock status
 
-var auditTime = function(){
-    console.log($(".row"))
-}
-auditTime();
+$(document).ready(function(){ 
+    
+        $("textarea").each(function(index){
+            if($(this).attr("data-value")==9){
+            console.log("Yay you found 9!");}
+            else{
+                console.log("NOT 9!")
+            }
+        });
+    
+});
+
+
+   
+//auditTime();
 
 
 
@@ -27,8 +38,7 @@ auditTime();
 
 
 //turn blank p elements into input fields
-//$('#container').on('click','#description', function(){
-    
+//$('#container').on('click','#description', function(){df
 
    // var textBox=$("<textarea>")
     //.addClass("ts col-10 description past");

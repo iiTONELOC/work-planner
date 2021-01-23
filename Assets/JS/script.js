@@ -1,4 +1,6 @@
 //display current day and time
+var currentTime=moment().format('HH');
+console.log("current time: " + currentTime )
 $(document).ready(function(){
 var dayWeek = moment().format('LLLL');
 console.log(dayWeek);
@@ -9,7 +11,7 @@ var timeUpdate= setInterval(function(){
     let dayWeek = moment().format('LLLL');
 console.log(dayWeek);
     $('#currentDay').text(dayWeek); 
-},15000);
+},5000);
 
 //time-block status
 var currentTime=moment().format('HH');
@@ -120,7 +122,8 @@ function five(){
 
 //auditTime();
 setInterval(function(){ 
-    
+var currentTime=moment().format('HH');
+console.log("current time: " + currentTime )
     $("textarea").each(function(index){
         $(this).removeClass("past future present")
         if($(this).attr("data-value")===currentTime){
@@ -135,7 +138,7 @@ setInterval(function(){
         }
     });
 
-},60000);
+},1000);
 
 
 // on save click get the text-area's value

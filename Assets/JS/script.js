@@ -13,7 +13,7 @@ console.log(dayWeek);
 
 //time-block status
 var currentTime=moment().format('hh:mm a');
-console.log("current time: " + currentTime +" hundred")
+console.log("current time: " + currentTime )
 $(document).ready(function(){ 
     
 $("textarea").each(function(index){

@@ -13,7 +13,7 @@ console.log(dayWeek);
 
 //time-block status
 var currentTime=moment().format('H');
-console.log("current time: " + currentTime)
+console.log("current time: " + currentTime +" hundred")
 $(document).ready(function(){ 
     
 $("textarea").each(function(index){
@@ -45,7 +45,7 @@ five();
 //update time slots if any data
 function nine(){
     var nineAM=localStorage.getItem("9AM");
-    console.log(nineAM);
+    //(nineAM);
     if(nineAM != null){
         document.getElementById('9').textContent=nineAM
     }
@@ -53,7 +53,7 @@ function nine(){
 }
 function ten(){
     var tenAM=localStorage.getItem("10AM");
-    console.log(tenAM);
+    //(tenAM);
     if(tenAM != null){
         document.getElementById('10').textContent=tenAM
     }
@@ -61,7 +61,7 @@ function ten(){
 }
 function eleven(){
     var elevenAM=localStorage.getItem("11AM");
-    console.log(elevenAM);
+    //(elevenAM);
     if(elevenAM != null){
         document.getElementById('11').textContent=elevenAM
     }
@@ -69,7 +69,7 @@ function eleven(){
 }
 function noon(){
     var twelvePM=localStorage.getItem("12PM");
-    console.log(twelvePM);
+    //(twelvePM);
     if(twelvePM != null){
         document.getElementById('12').textContent=twelvePM
     }
@@ -77,7 +77,7 @@ function noon(){
 }
 function one(){
     var onePM=localStorage.getItem("1PM");
-    console.log(onePM);
+    //(onePM);
     if(onePM != null){
         document.getElementById('13').textContent=onePM
     }
@@ -85,7 +85,7 @@ function one(){
 }
 function two(){
     var twoPM=localStorage.getItem("2PM");
-    console.log(twoPM);
+    //(twoPM);
     if(twoPM != null){
         document.getElementById('14').textContent=twoPM
     }
@@ -93,7 +93,7 @@ function two(){
 }
 function three(){
     var threePM=localStorage.getItem("3PM");
-    console.log(threePM);
+    //(threePM);
     if(threePM != null){
         document.getElementById('15').textContent=threePM
     }
@@ -101,7 +101,7 @@ function three(){
 }
 function four(){
     var fourPM=localStorage.getItem("4PM");
-    console.log(fourPM);
+    //(fourPM);
     if(fourPM != null){
         document.getElementById('16').textContent=fourPM
     }
@@ -109,7 +109,7 @@ function four(){
 }
 function five(){
     var fivePM=localStorage.getItem("5PM");
-    console.log(fivePM);
+    //(fivePM);
     if(fivePM != null){
         document.getElementById('17').textContent=fivePM
     }
@@ -124,14 +124,14 @@ setInterval(function(){
     $("textarea").each(function(index){
         $(this).removeClass("past future present")
         if($(this).attr("data-value")===currentTime){
-        console.log("Yay you found the current time!");
+        //console.log("Yay you found the current time!");
         $(this).addClass("present");
         }else if($(this).attr("data-value") >currentTime){
-        console.log("This is the FUTURE!");
+        //console.log("This is the FUTURE!");
         $(this).addClass("future");
         }else if($(this).attr("data-value") <currentTime){
         $(this).addClass("past");
-        console.log("this is the past")
+        //console.log("this is the past")
         }
     });
 
@@ -147,7 +147,7 @@ $(".saveBtn").on("click", function(){
     .siblings(".description")
     .val()
     .trim();
-    console.log(text)
+    //
         //save the data to local storage
         localStorage.setItem("9AM", text);
     ;}
@@ -156,7 +156,7 @@ $(".saveBtn").on("click", function(){
     .siblings(".description")
     .val()
     .trim();
-    console.log(text)
+    //
         //save the data to local storage
         localStorage.setItem("10AM", text);
     ;}
@@ -165,7 +165,7 @@ $(".saveBtn").on("click", function(){
     .siblings(".description")
     .val()
     .trim();
-    console.log(text)
+    //
         //save the data to local storage
         localStorage.setItem("11AM", text);
     ;}
@@ -174,7 +174,7 @@ $(".saveBtn").on("click", function(){
     .siblings(".description")
     .val()
     .trim();
-    console.log(text)
+    //
         //save the data to local storage
         localStorage.setItem("12PM", text);
     ;}
@@ -183,7 +183,7 @@ $(".saveBtn").on("click", function(){
     .siblings(".description")
     .val()
     .trim();
-    console.log(text)
+    //
         //save the data to local storage
         localStorage.setItem("1PM", text);
     ;}
@@ -192,7 +192,7 @@ $(".saveBtn").on("click", function(){
     .siblings(".description")
     .val()
     .trim();
-    console.log(text)
+    //
         //save the data to local storage
         localStorage.setItem("2PM", text);
     ;}
@@ -219,7 +219,7 @@ $(".saveBtn").on("click", function(){
     .siblings(".description")
     .val()
     .trim();
-    console.log(text)
+    //
         //save the data to local storage
         localStorage.setItem("5PM", text);
     ;}

@@ -28,6 +28,17 @@ Time blocks are color coded to present a visual representation of where you are 
 - Red represents the current time.
 - Green shows future time slots. 
 
+Before work preview:  
+![Prework](./Assets/Images/screenshot.gif)  
+  
+    
+Example at noon:  
+![Noon](./Assets/Images/noon.png)  
+  
+    
+Example late afternoon:  
+![Afternoon](./Assets/Images/afternoon.png)
+
 # Technology Stack
 | Technology | Description                        | Links |
 | ---------- | -----------------------------------| ------|

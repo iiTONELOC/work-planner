@@ -16,30 +16,30 @@ var currentTime=moment().format('H');
 console.log("current time: " + currentTime)
 $(document).ready(function(){ 
     
-        $("textarea").each(function(index){
-            $(this).removeClass("past future present")
-            if($(this).attr("data-value")===currentTime){
-            //console.log("Yay you found the current time!");
-            $(this).addClass("present");
+$("textarea").each(function(index){
+    $(this).removeClass("past future present")
+        if($(this).attr("data-value")===currentTime){
+        //console.log("Yay you found the current time!");
+        $(this).addClass("present");
         }else if($(this).attr("data-value") >currentTime){
-                //console.log("This is the FUTURE!");
-                $(this).addClass("future");
-            }else if($(this).attr("data-value") <currentTime){
-                $(this).addClass("past");
-                //console.log("this is the past")
-            }
-        });
+        //console.log("This is the FUTURE!");
+        $(this).addClass("future");
+        }else if($(this).attr("data-value") <currentTime){
+        $(this).addClass("past");
+        //console.log("this is the past")
+        }
+    });
 
-        //load time slots
-        nine();
-        ten();
-        eleven();
-        noon();
-        one();
-        two();
-        three();
-        four();
-        five();
+//load time slots
+nine();
+ten();
+eleven();
+noon();
+one();
+two();
+three();
+four();
+five();
     
 });
 //update time slots if any data
@@ -49,7 +49,7 @@ function nine(){
     if(nineAM != null){
         document.getElementById('9').textContent=nineAM
     }
-    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+    
 }
 function ten(){
     var tenAM=localStorage.getItem("10AM");
@@ -57,7 +57,7 @@ function ten(){
     if(tenAM != null){
         document.getElementById('10').textContent=tenAM
     }
-    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+    
 }
 function eleven(){
     var elevenAM=localStorage.getItem("11AM");
@@ -65,7 +65,7 @@ function eleven(){
     if(elevenAM != null){
         document.getElementById('11').textContent=elevenAM
     }
-    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+    
 }
 function noon(){
     var twelvePM=localStorage.getItem("12PM");
@@ -73,7 +73,7 @@ function noon(){
     if(twelvePM != null){
         document.getElementById('12').textContent=twelvePM
     }
-    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+    
 }
 function one(){
     var onePM=localStorage.getItem("1PM");
@@ -81,7 +81,7 @@ function one(){
     if(onePM != null){
         document.getElementById('13').textContent=onePM
     }
-    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+    
 }
 function two(){
     var twoPM=localStorage.getItem("2PM");
@@ -89,7 +89,7 @@ function two(){
     if(twoPM != null){
         document.getElementById('14').textContent=twoPM
     }
-    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+    
 }
 function three(){
     var threePM=localStorage.getItem("3PM");
@@ -97,7 +97,7 @@ function three(){
     if(threePM != null){
         document.getElementById('15').textContent=threePM
     }
-    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+    
 }
 function four(){
     var fourPM=localStorage.getItem("4PM");
@@ -105,7 +105,7 @@ function four(){
     if(fourPM != null){
         document.getElementById('16').textContent=fourPM
     }
-    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+    
 }
 function five(){
     var fivePM=localStorage.getItem("5PM");
@@ -113,7 +113,7 @@ function five(){
     if(fivePM != null){
         document.getElementById('17').textContent=fivePM
     }
-    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+    
 }
 
 
@@ -126,12 +126,12 @@ setInterval(function(){
         if($(this).attr("data-value")===currentTime){
         console.log("Yay you found the current time!");
         $(this).addClass("present");
-    }else if($(this).attr("data-value") >currentTime){
-            console.log("This is the FUTURE!");
-            $(this).addClass("future");
+        }else if($(this).attr("data-value") >currentTime){
+        console.log("This is the FUTURE!");
+        $(this).addClass("future");
         }else if($(this).attr("data-value") <currentTime){
-            $(this).addClass("past");
-            console.log("this is the past")
+        $(this).addClass("past");
+        console.log("this is the past")
         }
     });
 

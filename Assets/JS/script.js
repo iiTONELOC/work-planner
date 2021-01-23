@@ -12,7 +12,7 @@ console.log(dayWeek);
 },15000);
 
 //time-block status
-var currentTime=moment().format('hh:mm a');
+var currentTime=moment().format('HH');
 console.log("current time: " + currentTime )
 $(document).ready(function(){ 
     

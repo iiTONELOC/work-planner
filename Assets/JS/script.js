@@ -32,6 +32,10 @@ $(document).ready(function(){
 
         //load time slots
         nine();
+        ten();
+        eleven();
+        noon();
+        one();
     
 });
 //update time slots if any data
@@ -40,6 +44,38 @@ function nine(){
     console.log(nineAM);
     if(nineAM != null){
         document.getElementById('9').textContent=nineAM
+    }
+    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+}
+function ten(){
+    var tenAM=localStorage.getItem("10AM");
+    console.log(tenAM);
+    if(tenAM != null){
+        document.getElementById('10').textContent=tenAM
+    }
+    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+}
+function eleven(){
+    var elevenAM=localStorage.getItem("11AM");
+    console.log(elevenAM);
+    if(elevenAM != null){
+        document.getElementById('11').textContent=elevenAM
+    }
+    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+}
+function noon(){
+    var twelvePM=localStorage.getItem("12PM");
+    console.log(twelvePM);
+    if(twelvePM != null){
+        document.getElementById('12').textContent=twelvePM
+    }
+    //document.getElementById('#9').textContent=localStorage.getItem("9AM");
+}
+function one(){
+    var onePM=localStorage.getItem("1PM");
+    console.log(onePM);
+    if(onePM != null){
+        document.getElementById('13').textContent=onePM
     }
     //document.getElementById('#9').textContent=localStorage.getItem("9AM");
 }
@@ -78,7 +114,44 @@ $(".saveBtn").on("click", function(){
         //save the data to local storage
         localStorage.setItem("9AM", text);
     ;}
-    //console.log
+    if($(this).is("#saveBtn10")){
+        var text = $(this)
+    .siblings(".description")
+    .val()
+    .trim();
+    console.log(text)
+        //save the data to local storage
+        localStorage.setItem("10AM", text);
+    ;}
+    if($(this).is("#saveBtn11")){
+        var text = $(this)
+    .siblings(".description")
+    .val()
+    .trim();
+    console.log(text)
+        //save the data to local storage
+        localStorage.setItem("11AM", text);
+    ;}
+    if($(this).is("#saveBtn12")){
+        var text = $(this)
+    .siblings(".description")
+    .val()
+    .trim();
+    console.log(text)
+        //save the data to local storage
+        localStorage.setItem("12PM", text);
+    ;}
+    if($(this).is("#saveBtn1")){
+        var text = $(this)
+    .siblings(".description")
+    .val()
+    .trim();
+    console.log(text)
+        //save the data to local storage
+        localStorage.setItem("1PM", text);
+    ;}
+
+    
 })
 
 })
